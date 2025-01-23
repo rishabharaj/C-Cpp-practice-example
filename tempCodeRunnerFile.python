@@ -1,0 +1,35 @@
+from pptx import Presentation
+
+# Create a presentation object
+presentation = Presentation()
+
+# Define slide titles and content
+slides_content = [
+    ("Title Slide", "Poverty Alleviation in India\nStrategies and Initiatives\nYour Name\nDate"),
+    ("Introduction to Poverty in India", "Definition of poverty\nStatistics on poverty in India"),
+    ("Government Programs", "National Rural Employment Guarantee Act (NREGA)\nPublic Distribution System (PDS)\nMid-Day Meal Scheme"),
+    ("Financial Inclusion", "Pradhan Mantri Jan Dhan Yojana (PMJDY)\nImportance of financial services for poverty alleviation"),
+    ("Skill Development", "Skill India Mission\nImpact of skill development on employment opportunities"),
+    ("Social Welfare Programs", "National Social Assistance Program (NSAP)\nSupport for elderly, widows, and persons with disabilities"),
+    ("Education", "Sarva Shiksha Abhiyan (SSA)\nImportance of education in breaking the cycle of poverty"),
+    ("Healthcare", "Ayushman Bharat\nAccess to affordable healthcare services"),
+    ("Rural Development", "Pradhan Mantri Gram Sadak Yojana (PMGSY)\nImproving rural infrastructure for better access to services"),
+    ("Microfinance and SHGs", "Role of microfinance in empowering marginalized communities\nBenefits of SHGs in promoting entrepreneurship"),
+    ("Technology Interventions", "Digital India initiative\nLeveraging technology for service delivery and financial inclusion"),
+    ("Challenges and Future Directions", "Addressing corruption and bureaucratic inefficiencies\nNeed for continued innovation and commitment"),
+    ("Conclusion", "Summary of key points\nImportance of ongoing efforts in poverty alleviation"),
+    ("References", "List of sources used in the presentation"),
+    ("Q&A", "Open for questions and discussion")
+]
+
+# Add slides to the presentation
+for title, content in slides_content:
+    slide_layout = presentation.slide_layouts[1]  # Choose slide layout (1 corresponds to 'Title Slide')
+    slide = presentation.slides.add_slide(slide_layout)
+    title_placeholder = slide.shapes.title
+    title_placeholder.text = title
+    content_placeholder = slide.placeholders[1]
+    content_placeholder.text = content
+
+# Save the presentation
+presentation.save("Poverty_Alleviation_India.pptx")
