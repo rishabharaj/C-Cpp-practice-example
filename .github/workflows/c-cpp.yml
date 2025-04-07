@@ -16,6 +16,9 @@ jobs:
       - name: Generate configure script
         run: autoconf
 
+      - name: Generate Makefile.in
+        run: automake --add-missing
+
       - name: Configure the project
         run: ./configure
 
