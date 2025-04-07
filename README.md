@@ -13,9 +13,7 @@ This project is designed to help you practice and improve your C and C++ program
 Ensure you have the following tools installed on your system:
 
 - GCC (GNU Compiler Collection)
-- Autoconf
-- Automake
-- Libtool
+- MingW
 
 ### Building the Project
 
