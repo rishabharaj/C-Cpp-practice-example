@@ -1,3 +1,6 @@
+// difference between structure and class is that in structure, 
+//members are public by default, while in class, members are private by default.
+
 #include <iostream>
 using namespace std;
 
@@ -17,4 +20,5 @@ int main() {
     struct student s1 ;
     s1.input() ;
     return 0;
+
 }
